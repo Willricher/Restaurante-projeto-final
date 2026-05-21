@@ -1,3 +1,5 @@
+package restaurante.entidades;
+
 public class Cliente {
 
 
