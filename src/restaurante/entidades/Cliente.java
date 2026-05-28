@@ -1,8 +1,17 @@
 package restaurante.entidades;
 
-public class Cliente {
+public class Cliente extends Entidade {
+        String endereco;
 
+        public Cliente(String nome, String endereco) {
+                super(nome);
+                this.endereco = endereco;
+        }
 
-        System.out.println("true");
-
+        public String getEndereco() {
+                return endereco;
+        }
+        public void setEndereco(String endereco) {
+                this.endereco = endereco;
+        }
 }
