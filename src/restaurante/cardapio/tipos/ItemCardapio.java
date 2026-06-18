@@ -1,4 +1,4 @@
-package restaurante.cardapio;
+package restaurante.cardapio.tipos;
 
 public abstract class ItemCardapio {
     private String nome;

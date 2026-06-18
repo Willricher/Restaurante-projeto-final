@@ -26,9 +26,8 @@ public class Pedido {
         // fazer método de validação de string
         System.out.print("\nInsira o nome do cliente: ");
         String nomeCliente = scanner.nextLine();
-        System.out.print("\nInsira o endereço do cliente: ");
-        String enderecoCliente = scanner.nextLine();
-        this.cliente = new Cliente(nomeCliente, enderecoCliente);
+        this.cliente = new Cliente(nomeCliente, scanner);
+        this.cliente.setBairro();
         System.out.println("\nCliente adicionado!");
     }
 

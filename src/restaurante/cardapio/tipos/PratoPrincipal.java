@@ -1,4 +1,4 @@
-package restaurante.cardapio;
+package restaurante.cardapio.tipos;
 
 public class PratoPrincipal extends ItemCardapio {
     private String tipoDeProteina;

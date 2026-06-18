@@ -1,4 +1,4 @@
-package restaurante.cardapio;
+package restaurante.cardapio.tipos;
 
 public class Sobremesa extends ItemCardapio {
     public String tipoDeSobremesa;
