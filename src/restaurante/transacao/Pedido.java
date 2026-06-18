@@ -13,13 +13,13 @@ public class Pedido {
     private Cliente cliente;
     private Entregador entregador;
     private StatusDoPedido statusDoPedido;
-    private ArrayList itemCardapio;
+    private ArrayList itensCardapio;
 
-    public Pedido() {
+    public Pedido(ArrayList itensCardapio) {
         this.cliente = null;
         this.entregador = null;
         this.statusDoPedido = StatusDoPedido.SENDO_CRIADO;
-        this.itemCardapio = new ArrayList();
+        this.itensCardapio = itensCardapio;
     }
 
     public void definirCliente() {
