@@ -1,6 +1,7 @@
 package restaurante.transacao;
 
 import restaurante.cardapio.*;
+import restaurante.cardapio.tipos.ItemCardapio;
 import restaurante.entidades.*;
 import restaurante.utilitario.*;
 
@@ -13,9 +14,9 @@ public class Pedido {
     private Cliente cliente;
     private Entregador entregador;
     private StatusDoPedido statusDoPedido;
-    private ArrayList itensCardapio;
+    private ArrayList<ItemCardapio> itensCardapio;
 
-    public Pedido(ArrayList itensCardapio) {
+    public Pedido(ArrayList<ItemCardapio> itensCardapio) {
         this.cliente = null;
         this.entregador = null;
         this.statusDoPedido = StatusDoPedido.SENDO_CRIADO;
@@ -83,6 +84,17 @@ public class Pedido {
                 System.out.println("\nPedido agora entregue!");
             }
             break;
+        }
+    }
+
+    public void checarPedido() {
+        System.out.printf("""
+                \nStatus do pedido: %s
+                Cliente: %s
+                Entregador: %s
+                Itens pedidos:""", statusDoPedido.name(), cliente, entregador);
+        for (ItemCardapio itemCardapio : itensCardapio) {
+            System.out.println(itemCardapio.getNome());
         }
     }
 
